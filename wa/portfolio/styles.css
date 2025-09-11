@@ -7,7 +7,7 @@ html {
     font-family: "EB Garamond", serif;
     color: #30323D;
 }
-h1 {
+h1, h2, h3 {
     font-family: "Epunda Sans", sans-serif;
 }
 a { 
