@@ -1,0 +1,6 @@
+const button = document.querySelector('element');
+
+const cards = document.querySelectorAll('cards');
+
+//change text
+element.textContent = 'new content';

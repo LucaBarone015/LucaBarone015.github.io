@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .card-header{
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .expand-btn:hover{
+        color:#E8C547
+     }
+
+     button {
+        height: 2rem;
+        width: 10rem;
+        border-radius: 18%;
+     }
+
+     h3 {
+        text-align: center;
+        font-size: 3rem;
+     }
+
+     .card-content{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        border: .25rem solid black;
+        text-align: center;
+     }
+
+    </style>
+</head>
+<body>
+    <main class="card">
+    <section class="card-header">
+        <h3>Community Garden Project</h3>
+        <button class="expand-btn" aria-label="Expand card">+</button>
+    </section>
+    <section class="card-content">
+        <p class="summary">Join neighbors in creating a shared growing space...</p>
+        <article class="details hidden">
+        <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+        <p>Contact: garden@community.org</p>
+        </article>
+    </section>
+    <p>The Flexbox layout supports the user's experience by making the website more enjoyable to look at. 
+        It allows you to use design principles to help your site be more engaging and accessible. Having users 
+        click to reveal information gives them a choice to only see what they are interested in. They are no 
+        longer required to read everything, just what they want. I think collapsed content may disadvantage 
+        people using screen readers to navigate. They may miss content because it is initially hidden. 
+    </p>
+    <p> Hiding and revealing content allows the developer to better guide the user through the site. When 
+        choosing what to immediately reveal, you want to think about if it's necessary for every person 
+        using the site to read it, or is it's something only people who want to see more should access. 
+        This lets users have a more personalised experience so they feel welcomed and are more likely to
+         return. </p>
+</main>
+    <script>
+        let info = false;
+
+        const expandBtn = document.querySelector('.expand-btn');
+        const details = document.querySelector('.card-content');
+
+        expandBtn.addEventListener('click', showInfo);
+
+        function showInfo() {
+            if(info == false){
+                details.style.display = "flex";
+                expandBtn.textContent = "-";
+                info = true;
+            }
+            else{
+                details.style.display = "none";
+                expandBtn.textContent = "+";
+                info = false;
+            }
+        }
+    </script>
+</body>
+</html>
