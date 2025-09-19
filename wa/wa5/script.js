@@ -2,7 +2,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const navBurger = document.querySelector('.nav-burger-menu');
 
-let toggle = false;
+let toggle = true;
 
 navToggle.addEventListener("click", () =>{
     if(toggle == false) {
