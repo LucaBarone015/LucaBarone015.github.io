@@ -1,0 +1,143 @@
+
+* {
+    padding:0;
+    margin:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.parent-grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas: 
+        "nav"    
+        "body" 
+    ;
+}
+.content-grid {
+    display: grid;
+    height: 200%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: 
+        "tittle"    
+        "body1"
+        "body2" 
+    ;
+}
+
+.body{
+    background-color: rgb(62, 62, 62);
+    grid-area: body;
+}
+.box{
+    border: 2px solid black;
+    background-color: gray;
+}
+
+
+#one{
+    grid-area: tittle;
+}
+#two{
+    grid-area: body1;
+}
+#three{
+    grid-area: body2;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    grid-area: nav;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(207, 184, 124);
+    height:65px;
+}
+
+.nav-menu{
+    display: flex;
+    gap:5vw;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#565A5C
+}
+
+a {
+    color:black;
+}
+
+
+@media (min-width: 768px) {
+    .nav-burger-menu {
+        display: none !important;
+    }
+    .nav-menu {
+        display: flex;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-toggle span {
+        background-color: rgb(255, 255, 255, 0.869);
+        height: 0.2em;
+        width: 2em;
+        display: flex;
+        margin: 10%;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .nav-burger-menu li{
+        background-color: #A2A4A3;
+        border-width: 10em;
+        border-left: 0.2rem solid black;
+        border-right: 0.2rem solid black;
+        text-align: center;
+    }
+
+    .nav-burger-menu li:first-child {
+    border-top: 0.2rem solid black;
+    }
+
+    .nav-burger-menu li:last-child {
+        border-bottom: 0.2rem solid black;
+    }
+
+    .nav-burger-menu li + li {
+        border-top: 0.2rem solid black;
+    }
+    .nav-burger-menu li a {
+    display: block;
+    padding: 2%;
+    background-color:#A2A4A3;
+    color: white;
+    text-decoration: none;
+    }
+    .nav-burger-menu li :hover{
+        background-color: #565A5C;
+    }
+}
