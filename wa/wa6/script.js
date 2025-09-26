@@ -5,7 +5,7 @@ const navMenu = document.querySelector('.nav-menu');
 const navBurger = document.querySelector('.nav-burger-menu');
 
 let toggle = false;
-
+//nav bar burger menu
 navToggle.addEventListener("click", () =>{
     if(toggle == false) {
         navBurger.style.display = "block";
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalCaption = document.getElementById("modal-caption");
   const closeBtn = document.querySelector(".close");
 
+  //opens and closes gallery images when clicked
   document.querySelectorAll(".gallery-pic img").forEach(img => {
     img.addEventListener("click", () => {
       modal.style.display = "block";
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
+//When submit button is clocked pop up lets user know they are registered 
 document.querySelector("#qualifying-list").addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.querySelector("#name").value;
