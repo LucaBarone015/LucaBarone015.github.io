@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalCaption = document.getElementById("modal-caption");
   const closeBtn = document.querySelector(".close");
 
-  // Attach click handler to each image
   document.querySelectorAll(".gallery-pic img").forEach(img => {
     img.addEventListener("click", () => {
       modal.style.display = "block";
@@ -32,19 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
       modalCaption.textContent = img.getAttribute("data-caption") || img.alt || "";
     });
   });
-
-  // Close when the X is clicked
   closeBtn.onclick = function () {
     modal.style.display = "none";
   };
-
-  // Optional: close when clicking outside the image
   modal.onclick = function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   };
-})
+});
 
 document.querySelector("#qualifying-list").addEventListener("submit", (e) => {
   e.preventDefault();
