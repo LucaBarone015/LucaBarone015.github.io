@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class ="parent-grid">
+        <nav class="nav-bar">
+            <section class="main-nav">
+            <article class="nav-brand">CU Endurence Racing</article>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="https://lucabarone015.github.io/wa/wa7">Home</a></li>
+                <li><a href="#race">Race Info</a></li>
+                <li><a href="https://lucabarone015.github.io/wa/wa7/qualifying.html">Qualifying</a></li>
+                <li><a href="https://lucabarone015.github.io/wa/wa7/gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </section>
+            <ul class = "nav-burger-menu">
+                <li><a href="https://lucabarone015.github.io/wa/wa7">Home</a></li>
+                <li><a href="#race">Race Info</a></li>
+                <li><a href="https://lucabarone015.github.io/wa/wa7/qualifying.html">Qualifying</a></li>
+                <li><a href="https://lucabarone015.github.io/wa/wa7/gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="body">
+            <section class="home-content-grid">
+                <div class="box" id="titlebox">
+                    <div class="image-container">
+                        <img src="img/cubrt1.jpg" alt="Racing pic">
+                        <h1 class="overlay-text">Qualifying</h1>
+                    </div>
+                </div>
+                <div class="box" id="hometext">
+                    <form id="qualifying-list">
+                        <input type="text" id="name" placeholder="Driver name">
+                        <button type="submit">Enter Qualifying</button>
+                    </form>
+                    <h3>Qualifying Drivers</h3>
+                    <div id="qualified-drivers"></div>
+                    <button id="clear-list">Clear List</button>
+                </div>
+                <div class="box" id="logobox">
+                    <img src="img/cubrtLogo.png" alt="Logo">
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
