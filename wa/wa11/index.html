@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,43 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
-        <header>Random Jokes</header>
-        <section class="quotes">
-          <div class="quote-text" id="js-quote-text"></div>
-          <div class="quote-text" id="js-answer-text"></div>
-        </section>
-        <section class="controls" >
-          <div class="button-box">
-            <button type="button" id="js-new-quote" class="new-quote button">
-              Generate a new knock knock joke!
-            </button>
-            <button type="button" id="js-new-dad" class="new-quote button">
-              Generate a new dad Joke!
-            </button>
-          </div>
-          
-          <button type="button2" id="js-tweet" class="twitter button">
-            Show me the answer!
-          </button>
-          <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
-        <p>
-          My extension to the code is adding a second button that uses the api. Each button uses a different link accessing the API 
-          to get a different type of joke. Each button has its own JavaScript function that is called when the button is pressed.
-        </p>
-        <p>
-          To use an API in my Google News critique project, I could initially call on it to get the information for the home 
-          page. Using the different categories of information and CSS, I can create my layout to match stories, 
-          pictures, and links. When users click on a story, I can call on the API again for more specific 
-          information to display about a certain story. I can use the provided categories from the API to match 
-          users with stories that will appeal to them specifically.         
-        </p>
-      </section>
+    <div class="body">
+      <header>News</header>
+      <nav class="filter">
+        <button id="general">General</button>
+        <button id="sports">Sports</button>
+        <button id="health">Health</button>
+        <button id="business">Business</button>
+        <button id="clear">Clear</button>
+      </nav>
+      <section class="content">
         
-      </div>
+      </section>   
+    </div>
       <script src="script.js"></script>
 </body>
 </html>
