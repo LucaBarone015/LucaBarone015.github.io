@@ -1,62 +1,67 @@
-let triviaBtn = document.querySelector("#js-new-quote").addEventListener('click', newTrivia);
-let dadBtn = document.querySelector("#js-new-dad").addEventListener('click', newDad);
+document.querySelector("#general").addEventListener('click', () => {
+  getNews("general");
+  localStorage.setItem("selectedCategory", "general");
+});
 
-let answerBtn = document.querySelector('#js-tweet').addEventListener('click', newAnswer);
+document.querySelector("#sports").addEventListener('click', () => {
+  getNews("sports");
+  localStorage.setItem("selectedCategory", "sports");
+});
 
-let current = {
-    question: "",
-    answer: "",
-}
+document.querySelector("#health").addEventListener('click', () => {
+  getNews("health");
+  localStorage.setItem("selectedCategory", "health");
+});
 
-const endpoint = "https://official-joke-api.appspot.com/jokes/knock-knock/random";
-const dadendpoint = "https://official-joke-api.appspot.com/jokes/dad/random";
+document.querySelector("#business").addEventListener('click', () => {
+  getNews("business");
+  localStorage.setItem("selectedCategory", "business");
+});
+document.querySelector("#clear").addEventListener('click', function() {
+  localStorage.removeItem("selectedCategory");
+  const content = document.querySelector(".content");
+  content.innerHTML = "";
+});
 
-async function newTrivia() {
+// api https://saurav.tech/NewsAPI/top-headlines/category/<category>/us.json
+
+async function getNews(userCategory) {
   try {
-    const response = await fetch(endpoint);
+    const response = await fetch(`https://saurav.tech/NewsAPI/top-headlines/category/${userCategory}/us.json`);
     if (!response.ok) {
         throw Error(response.statusText)
     }
-    const json = await response.json();
-    console.log(json);
-    displayTrivia(json[0]["setup"]);
-    current.question = json[0]["setup"];
-    current.answer = json[0]["punchline"];
-  } catch (err) {
-    console.log(err)
-    alert('Failed to get new trivia')
+    const data = await response.json();
+    console.log(data);
+    displayNews(data.articles);
+  } catch (error) {
+    console.error("Error fetching news:", error);
+    alert("Failed to load news. Please try again later.");
   }
 
 }
 
-async function newDad() {
-  try {
-    const response = await fetch(dadendpoint);
-    if (!response.ok) {
-        throw Error(response.statusText)
-    }
-    const json = await response.json();
-    console.log(json);
-    displayTrivia(json[0]["setup"]);
-    current.question = json[0]["setup"];
-    current.answer = json[0]["punchline"];
-  } catch (err) {
-    console.log(err)
-    alert('Failed to get new trivia')
+function displayNews(articles) {
+  const content = document.querySelector(".content");
+  content.innerHTML = "";
+
+  articles.forEach(article => {
+    const card = document.createElement("div");
+    card.classList.add("article");
+
+    card.innerHTML = 
+    `<img src="${article.urlToImage || 'https://via.placeholder.com/250x150?text=No+Image'}" alt="News image">
+      <h3>${article.title}</h3>
+      <p>${article.description || 'No description available.'}</p>
+      <a href="${article.url}" target="_blank">Read more</a>`;
+
+    content.appendChild(card);
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedCategory = localStorage.getItem("selectedCategory");
+  if (savedCategory) {
+    getNews(savedCategory);
   }
-}
-
-function displayTrivia(question) { 
-    const questionText = document.querySelector('#js-quote-text');
-    questionText.textContent = question;
-    const answerText = document.querySelector("#js-answer-text");
-    answerText.textContent = "";
-}
-
-function newAnswer () {
-    //console.log("Success == answer!");
-    const answerText = document.querySelector("#js-answer-text");
-    answerText.textContent = current.answer;
-}
-
-newTrivia();
+});
