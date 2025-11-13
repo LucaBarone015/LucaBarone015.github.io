@@ -1,0 +1,94 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    margin: 0%;
+    padding: 0%;
+}
+.head{
+    box-shadow: 0 6px 8px rgba(0,0,0,0.25);
+    background-color: rgb(205, 49, 49);
+    width:auto;
+}
+nav{
+    background-color: rgb(205, 49, 49);
+    padding: 1%;
+    min-width: 300px;
+}
+button {
+    background-color: rgb(205, 49, 49);
+    border-width: 0px;
+    color: white;
+}
+button:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+header{
+    background-color: rgb(205, 49, 49);
+    font-size:100px;
+    color: white;
+    padding:1%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    min-width: 300px;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.article {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.article img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.article h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.article p {
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.article a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-top: 10px;
+}
+.article {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.article:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    text-decoration: none;
+}
+
+
+
