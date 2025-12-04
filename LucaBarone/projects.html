@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class ="parent-grid">
+        <nav class="nav-bar">
+            <section class="main-nav">
+            <article class="nav-brand">LB</article>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="https://lucabarone015.github.io/LucaBarone">Home</a></li>
+                <li><a href="https://lucabarone015.github.io/LucaBarone/projects.html">Projects</a></li>
+                <li><a href="https://lucabarone015.github.io/LucaBarone/about.html">About Me</a></li>
+                <li><a href="https://lucabarone015.github.io/LucaBarone/contact.html">Contact</a></li>
+            </ul>
+            </section>
+            <ul class = "nav-burger-menu">
+                <li><a href="https://lucabarone015.github.io/LucaBarone">Home</a></li>
+                <li><a href="https://lucabarone015.github.io/LucaBarone/projects.html">Projects</a></li>
+                <li><a href="https://lucabarone015.github.io/LucaBarone/about.html">About Me</a></li>
+                <li><a href="https://lucabarone015.github.io/LucaBarone/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="header">
+            Projects
+        </section>
+        <section class="body projects-page">
+            <!-- Filter buttons -->
+            <div class="filters-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="cir">Circuits</button>
+                <button class="filter-btn" data-filter="code">Coding</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Sample project cards - paste your projects here -->
+                <div class="project-card" data-category="cir">
+                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="project-info">
+                        <h3>High Beams Solution</h3>
+                        <p class="project-category">Circuit/Enclosure Design</p>
+                        <p class="project-description">Flashes a strobe light at oncoming drivers who leave their bright headlights on.</p>
+                        <div class="project-tags">
+                            <span class="tag">Wiring</span>
+                            <span class="tag">3D Modeling</span>
+                            <span class="tag">Coding</span>
+                        </div>
+                        <a href="https://sites.google.com/colorado.edu/object-documentation/idc2-project" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="code">
+                    <div class="project-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);"></div>
+                    <div class="project-info">
+                        <h3>Dungean Crawler Game</h3>
+                        <p class="project-category">Other</p>
+                        <p class="project-description">Created a text based dungeon crawler game using C++ and three data structures: a Hash Table, Priority Queue, and Graph</p>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Data Structures</span>
+                        </div>
+                        <a href="https://github.com/cu-csci-2270-spring-2025/final-project-LucaBarone015" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image"><img src="img/news.png" alt="news site" width="100%" height="100%"></div>
+                    <div class="project-info">
+                        <h3>Demo News Site</h3>
+                        <p class="project-category">Web Development</p>
+                        <p class="project-description">Using a API from get hub, I designed a filterable news site that uses local data storage to save user preferences.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">JS</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <a href="https://lucabarone015.github.io/wa/wa13/" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                <div class="project-image"><img src="img/cubrt.png" alt="Racing site" width="100%" height="100%"></div>                    <div class="project-info">
+                        <h3>Mock Racing Team Site</h3>
+                        <p class="project-category">Web Development</p>
+                        <p class="project-description">Created a mock up of a potential new website for the CU Boulder Endurence Racing Team. </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">JS</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <a href="https://lucabarone015.github.io/wa/wa8/" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image"><img src="img/mountaincarving.jpg" alt="Racing site" width="50%" height="100%"></div>
+                    <div class="project-info">
+                        <h3>Mountain Carving</h3>
+                        <p class="project-category">Design</p>
+                        <p class="project-description">Designed a mountain range in Rhino 3D and transformed it into a real world art piece using wood working and laser cutting skills.</p>
+                        <div class="project-tags">
+                            <span class="tag">Wood Working</span>
+                            <span class="tag">3D Modeling</span>
+                            <span class="tag">Laser Cutting</span>
+                        </div>
+                        <a href="https://sites.google.com/colorado.edu/material/final-project" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image"><img src="img/CSmailer.png" alt="Racing site" width="100%" height="100%"></div>
+                    <div class="project-info">
+                        <h3>Colorado Symphony Mailer</h3>
+                        <p class="project-category">Design</p>
+                        <p class="project-description">Drafted a possible poster mailer for the Colorado Symphony</p>
+                        <div class="project-tags">
+                            <span class="tag">InDesign</span>
+                            <span class="tag">Graphic Design</span>
+                        </div>
+                        <a href="img\LBSymphonyMailer.pdf" download class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>
