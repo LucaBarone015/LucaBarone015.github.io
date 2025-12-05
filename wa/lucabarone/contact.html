@@ -35,8 +35,56 @@
         </section>
         <section class="body">
             <section class="contact">
-            <div>Email: Lucabarone015@gmail.com</div>
-            <div>School email: Luba7610@Colorado.edu</div>
+                <div class="contact-panel">
+                    <div class="contact-card contact-form-card">
+                        <div class="card-anim-bg"></div>
+                        <h2 class="contact-title">Get in touch</h2>
+                        <p class="contact-sub">Have a project, question, or just want to say hi? Send a message and I'll get back to you.</p>
+
+                        <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                            <label class="field">
+                                <input type="text" name="name" id="name" required>
+                                <span class="label">Your name</span>
+                            </label>
+
+                            <label class="field">
+                                <input type="email" name="email" id="email" required>
+                                <span class="label">Email address</span>
+                            </label>
+
+                            <label class="field">
+                                <textarea name="message" id="message" rows="5" required></textarea>
+                                <span class="label">Your message</span>
+                            </label>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn primary" id="sendBtn">Send message</button>
+                                <button type="button" class="btn ghost" id="clearBtn">Clear</button>
+                            </div>
+
+                            <div class="form-status" id="formStatus" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                    <aside class="contact-card contact-info-card">
+                        <h3>Contact Info</h3>
+                        <p class="muted">Prefer direct email?</p>
+                        <div class="contact-emails">
+                            <div class="email-row">
+                                <strong>Personal</strong>
+                                <span class="email">lucabarone015@gmail.com</span>
+                                <button class="copy-btn" data-email="lucabarone015@gmail.com">Copy</button>
+                            </div>
+                            <div class="email-row">
+                                <strong>School</strong>
+                                <span class="email">Luba7610@colorado.edu</span>
+                                <button class="copy-btn" data-email="Luba7610@colorado.edu">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="small-note">I'll reply within a few business days. Thank you!</div>
+                    </aside>
+                </div>
             </section>
         </section>
 
