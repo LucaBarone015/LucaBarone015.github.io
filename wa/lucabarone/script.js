@@ -114,3 +114,17 @@ navToggle.addEventListener('click', () => {
     });
   });
 })();
+// Reveal skill cards on scroll
+const skillCards = document.querySelectorAll('.skill-card');
+
+function revealSkills() {
+  skillCards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealSkills);
+window.addEventListener('load', revealSkills);
