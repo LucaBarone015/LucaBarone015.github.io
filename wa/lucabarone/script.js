@@ -128,3 +128,9 @@ function revealSkills() {
 
 window.addEventListener('scroll', revealSkills);
 window.addEventListener('load', revealSkills);
+const hero = document.querySelector('.background-effects');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const hue = scrollY % 360; // cycles colors
+  hero.style.background = `linear-gradient(90deg, hsl(${hue}, 70%, 50%), hsl(${(hue+60)%360}, 70%, 50%))`;
+});
