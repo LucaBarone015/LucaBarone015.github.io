@@ -114,33 +114,3 @@ navToggle.addEventListener('click', () => {
     });
   });
 })();
-
-// WOW: subtle mouse-parallax for the animated orbs in the hero
-(function(){
-  try {
-    const hero = document.querySelector('.wow-hero');
-    if (!hero) return;
-    const orbs = Array.from(document.querySelectorAll('.wow-bg .orb'));
-
-    // tune movement: each orb has a multiplier
-    const multipliers = [0.02, 0.03, 0.018, 0.025];
-
-    function onMove(e){
-      const rect = hero.getBoundingClientRect();
-      const cx = rect.left + rect.width/2;
-      const cy = rect.top + rect.height/2;
-      const clientX = e.clientX || (e.touches && e.touches[0].clientX) || cx;
-      const clientY = e.clientY || (e.touches && e.touches[0].clientY) || cy;
-      const dx = (clientX - cx);
-      const dy = (clientY - cy);
-
-      orbs.forEach((orb, i)=>{
-        const m = multipliers[i] || 0.02;
-        orb.style.transform = `translate3d(${dx*m}px, ${dy*m}px, 0) scale(1)`;
-      });
-    }
-
-    window.addEventListener('mousemove', onMove, { passive: true });
-    window.addEventListener('touchmove', onMove, { passive: true });
-  } catch (e) { /* fail silently */ }
-})();

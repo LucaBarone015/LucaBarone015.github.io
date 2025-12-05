@@ -199,8 +199,6 @@ a {
 
 .form-actions { display: flex; gap: 0.75rem; align-items: center; margin-top: 0.25rem; }
 .btn { padding: 0.6rem 1rem; border-radius: 10px; cursor: pointer; border: 1px solid rgba(213,213,213,0.12); background: transparent; color: inherit; }
-.btn.primary { background: linear-gradient(90deg,#667eea,#764ba2); border: none; color: white; box-shadow: 0 8px 18px rgba(118,75,162,0.14); transition: transform .14s ease; }
-.btn.primary:active { transform: translateY(1px) scale(.997); }
 .btn.ghost { background: rgba(255,255,255,0.02); }
 
 .form-status { margin-top: 0.75rem; min-height: 1.2rem; color: #bfe7c7; }
@@ -209,8 +207,25 @@ a {
 .muted { color: rgba(213,213,213,0.8); margin-bottom: 0.5rem; }
 .contact-emails .email-row { display: flex; gap: 0.6rem; align-items: center; padding: 0.35rem 0; }
 .contact-emails .email-row .email { color: rgba(213,213,213,0.9); flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.contact-emails .email-row .copy-btn { flex: 0 0 auto; padding: 0.25rem 0.6rem; border-radius: 8px; font-size: 0.9rem; }
-
+.contact-emails .email-row .copy-btn {
+    flex: 0 0 auto;
+    padding: 0.25rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(213,213,213,0.06);
+    color: inherit;
+    cursor: pointer;
+    transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+.contact-emails .email-row .copy-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+.contact-emails .email-row .copy-btn:active {
+    transform: translateY(0);
+}
 .socials { display:flex; flex-direction: column; gap: .5rem; margin-top: 1rem; }
 .social { display:inline-block; padding: .4rem .6rem; background: rgba(255,255,255,0.02); border-radius: 8px; text-decoration:none; color:inherit; border:1px solid rgba(213,213,213,0.06);} 
 .small-note { margin-top: 1rem; color: rgba(213,213,213,0.8); font-size: 0.9rem; }
