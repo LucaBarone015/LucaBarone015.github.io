@@ -35,9 +35,8 @@ navToggle.addEventListener('click', () => {
   });
 })();
 
-// Contact page interactions: form handling + copy email
 (function(){
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'; // replace YOUR_FORM_ID with your Formspree form ID
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/myzrdnee';
   const form = document.getElementById('contactForm');
   const statusEl = document.getElementById('formStatus');
   const sendBtn = document.getElementById('sendBtn');
@@ -60,18 +59,14 @@ navToggle.addEventListener('click', () => {
         return;
       }
 
-      // simple email regex
       const re = /^\S+@\S+\.\S+$/;
       if (!re.test(email.value.trim())) { setStatus('Please enter a valid email.', false); return; }
 
-      // send to Formspree
       sendBtn.disabled = true;
       sendBtn.textContent = 'Sending...';
       setStatus('', true);
 
       const formData = new FormData(form);
-      // If you want to include a subject, uncomment and set
-      // formData.append('_subject', `Website contact from ${name.value}`);
 
       fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
@@ -100,7 +95,6 @@ navToggle.addEventListener('click', () => {
     if (clearBtn) clearBtn.addEventListener('click', ()=>{ form.reset(); setStatus('', true); });
   }
 
-  // copy email buttons
   document.querySelectorAll('.copy-btn').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       const email = btn.getAttribute('data-email');
@@ -114,7 +108,7 @@ navToggle.addEventListener('click', () => {
     });
   });
 })();
-// Reveal skill cards on scroll
+
 const skillCards = document.querySelectorAll('.skill-card');
 
 function revealSkills() {
@@ -131,6 +125,6 @@ window.addEventListener('load', revealSkills);
 const hero = document.querySelector('.background-effects');
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
-  const hue = scrollY % 360; // cycles colors
+  const hue = scrollY % 360;
   hero.style.background = `linear-gradient(90deg, hsl(${hue}, 70%, 50%), hsl(${(hue+60)%360}, 70%, 50%))`;
 });

@@ -139,7 +139,7 @@ a {
 .contact{
     padding: 2rem 1rem;
 }
-/* Contact panel styles */
+
 .contact-panel {
     display: grid;
     grid-template-columns: 1fr 420px;
@@ -148,7 +148,6 @@ a {
     max-width: 1100px;
     margin: 2rem auto;
 }
-/* add symmetric horizontal padding so the panel has equal spacing on both sides */
 .contact-panel { padding: 0 1.5rem; box-sizing: border-box; }
 
 .contact-card {
@@ -163,17 +162,6 @@ a {
 
 .contact-form-card { min-height: 420px; }
 
-.card-anim-bg {
-    position: absolute;
-    inset: -40% -10% auto -10%;
-    height: 220%;
-    background: radial-gradient(circle at 10% 20%, rgba(102,126,234,0.15), transparent 12%),
-                radial-gradient(circle at 90% 80%, rgba(245,95,109,0.12), transparent 14%);
-    transform: rotate(8deg);
-    filter: blur(24px);
-    pointer-events: none;
-}
-
 .contact-title { margin: 0 0 0.25rem 0; font-size: 1.6rem; }
 .contact-sub { margin: 0 0 1rem 0; color: rgba(213,213,213,0.85); }
 
@@ -181,23 +169,21 @@ a {
 .contact-form .field input,
 .contact-form .field textarea {
     width: 100%;
-    box-sizing: border-box; /* include padding in width so left/right gaps are consistent */
-    padding: 0.9rem 1rem 0.6rem 1rem; /* symmetric left/right padding */
+    box-sizing: border-box;
+    padding: 0.9rem 1rem 0.6rem 1rem;
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(213,213,213,0.08);
     color: inherit;
     border-radius: 8px;
     outline: none;
     transition: box-shadow 0.18s ease, border-color 0.18s ease;
+    resize: vertical;
 }
-.contact-form .field textarea { resize: vertical; }
-.contact-form .field input:focus, .contact-form .field textarea:focus { box-shadow: 0 6px 18px rgba(102,126,234,0.08); border-color: rgba(102,126,234,0.6); }
 
-.contact-form .label { position: absolute; left: 14px; top: 10px; transform-origin: left top; transition: transform .18s ease, font-size .18s ease, top .18s ease; color: rgba(213,213,213,0.7); pointer-events: none; }
-.contact-form .field input:not(:placeholder-shown) + .label,
-.contact-form .field textarea:not(:placeholder-shown) + .label,
-.contact-form .field input:focus + .label,
-.contact-form .field textarea:focus + .label { transform: translateY(-14px) scale(0.85); top: 6px; }
+.contact-form .field input::placeholder,
+.contact-form .field textarea::placeholder {
+    color: rgba(213,213,213,0.5);
+}
 
 .form-actions { display: flex; gap: 0.75rem; align-items: center; margin-top: 0.25rem; }
 .btn { padding: 0.6rem 1rem; border-radius: 10px; cursor: pointer; border: 1px solid rgba(213,213,213,0.12); background: transparent; color: inherit; }
@@ -469,7 +455,7 @@ img {
         transform: translateY(-4px);
     }
 }
-/* -------- Skills Section Styling -------- */
+
 .skills-section {
   background-color: rgb(70, 91, 107);
   color: rgb(213, 213, 213);
@@ -528,7 +514,7 @@ img {
   font-size: 1.1rem;
   line-height: 1.4;
 }
-/* HERO SECTION */
+
 .hero {
     height: 90vh;
     background: linear-gradient(
@@ -610,7 +596,6 @@ img {
     color: rgb(50, 60, 70);
 }
 
-/* Fade-in animation */
 @keyframes fadeInHero {
     from { opacity: 0; transform: translateY(30px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -708,12 +693,10 @@ img {
     animation-range: entry 0% cover 35%;
 }
 
-/* odd skill cards → slide from left */
 .skill-item:nth-child(odd) {
     --slide-direction: -80px;
 }
 
-/* even skill cards → slide from right */
 .skill-item:nth-child(even) {
     --slide-direction: 80px;
 }
