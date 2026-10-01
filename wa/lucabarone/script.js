@@ -128,3 +128,32 @@ window.addEventListener('scroll', () => {
   const hue = scrollY % 360;
   hero.style.background = `linear-gradient(90deg, hsl(${hue}, 70%, 50%), hsl(${(hue+60)%360}, 70%, 50%))`;
 });
+
+// Toggle `.scrolled` on the nav so it can shift color when the page is scrolled
+(function(){
+  // distance-based nav appearance: map scroll distance to alpha (no blur)
+  const navBar = document.querySelector('.nav-bar');
+  const mainNav = document.querySelector('.main-nav');
+  const MAX_SCROLL = 120; // distance (px) over which the nav reaches full effect
+  const MAX_ALPHA = 0.92; // max background alpha for the nav when fully scrolled
+
+  function setNavProgress(progress){
+    progress = Math.max(0, Math.min(1, progress));
+    const alpha = (progress * MAX_ALPHA).toFixed(3);
+    if (mainNav) {
+      mainNav.style.setProperty('--nav-alpha', alpha);
+    }
+  }
+
+  const onScroll = ()=>{
+    const y = window.scrollY || window.pageYOffset;
+    const progress = y / MAX_SCROLL;
+    setNavProgress(progress);
+  };
+
+  // initialize and wire events
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('load', onScroll);
+  // also initialize now in case script runs after load
+  onScroll();
+})();

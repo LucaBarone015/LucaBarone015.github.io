@@ -31,19 +31,66 @@
             </ul>
         </nav>
         <section class="header">
-            Projects
+            <div class="page-container">
+                <h1 class="section-title" style="margin:0;">Projects</h1>
+            </div>
         </section>
+        
         <section class="body projects-page">
+            <div class="page-container">
             <div class="filters-container">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-                <button class="filter-btn" data-filter="cir">Circuits</button>
-                <button class="filter-btn" data-filter="code">Coding</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Design</button>
+                <button class="filter-btn" data-filter="other">Other</button>
             </div>
 
+
             <div class="projects-grid">
-                <div class="project-card" data-category="cir">
+                <div class="project-card" data-category="web">
+                    <div class="project-image"><img src="img/SmartAccessNav.png" alt="High Beams Solution Project Photo"></div>
+                    <div class="project-info">
+                        <h3>Smart Access Web App - Navigation Redesign</h3>
+                        <p class="project-category">Design/UX</p>
+                        <p class="project-description">Redesigned the web portal navigation for Smart Access to improve user experience on their software.</p>
+                        <div class="project-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">UX</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                        <a href="https://www.figma.com/make/ZNEJHvrVrCTe36byALDm63/Expand-Side-Navigation-Mockup?fullscreen=1&t=nhGP9fS0BprFquib-1&code-node-id=0-9">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" id="mobile-design" data-category="mobile">
+                    <div class="project-image"><img src="img/ActionPlansFlow.png" alt="Action Plans Flow mobile layout designed in Figma"></div>
+                    <div class="project-info">
+                        <h3>Smart Access Mobile App - Action Plans Flow</h3>
+                        <p class="project-category">Design/Mobile</p>
+                        <p class="project-description">Created a workflow for assigning a follow-up action to an associate in the Smart Access mobile app.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <a href="https://www.figma.com/make/gOAXyRvgzPN0GO6nMcgzgG/Create-mobile-action-flow?fullscreen=1&t=uVNGDibMvdEYQ47j-1&code-node-id=0-9" target="_blank" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" id="mobile-design" data-category="mobile">
+                    <div class="project-image"><img src="img/SACommentsTN.png" alt="Action Plans Flow mobile layout designed in Figma"></div>
+                    <div class="project-info">
+                        <h3>Smart Access Mobile App - Comment/Notes Section</h3>
+                        <p class="project-category">Design/Mobile</p>
+                        <p class="project-description">Designed a section to leave comments on associates after completeing observations and designed a notes section on associates home page to view notes/comments.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <a href="img/SAComments.pdf">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="other">
                     <div class="project-image"><img src="img/IDC2Photo.jpg" alt="High Beams Solution Project Photo"></div>
                     <div class="project-info">
                         <h3>High Beams Solution</h3>
@@ -58,21 +105,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="code">
-                    <div class="project-image"><img src="img/dungeon.png" alt="Photo of Project Running"></div>
-                    <div class="project-info">
-                        <h3>Dungeon Crawler Game</h3>
-                        <p class="project-category">Coding</p>
-                        <p class="project-description">Created a text-based dungeon crawler game using C++ and three data structures: a Hash Table, Priority Queue, and Graph</p>
-                        <div class="project-tags">
-                            <span class="tag">C++</span>
-                            <span class="tag">Data Structures</span>
-                        </div>
-                        <a href="https://github.com/cu-csci-2270-spring-2025/final-project-LucaBarone015" target="_blank" class="project-link">View Project →</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="design">
+                <div class="project-card" data-category="other">
                     <div class="project-image"><img src="img/GameSFX.png" alt="Video Game Photo"></div>
                     <div class="project-info">
                         <h3>Video Game Sound Design</h3>
@@ -85,52 +118,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web">
-                    <div class="project-image"><img src="img/news.png" alt="News Site Photo"></div>
-                    <div class="project-info">
-                        <h3>Demo News Site</h3>
-                        <p class="project-category">Web Development</p>
-                        <p class="project-description">Using an API from GitHub, I designed a filterable news site that uses local data storage to save user preferences.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">JS</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">API</span>
-                        </div>
-                        <a href="https://lucabarone015.github.io/wa/wa13/" target="_blank" class="project-link">View Project →</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="web">
-                <div class="project-image"><img src="img/cubrt.png" alt="Project Photo"></div>                    <div class="project-info">
-                        <h3>Mock Racing Team Site</h3>
-                        <p class="project-category">Web Development</p>
-                        <p class="project-description">Created a mockup of a potential new website for the CU Boulder Endurance Racing Team. </p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">JS</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                        <a href="https://lucabarone015.github.io/wa/wa8/" target="_blank" class="project-link">View Project →</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="design">
-                    <div class="project-image"><img src="img/mountaincarving.jpg" alt="Project Photo"></div>
-                    <div class="project-info">
-                        <h3>Mountain Carving</h3>
-                        <p class="project-category">Design</p>
-                        <p class="project-description">Designed a mountain range in Rhino 3D and transformed it into a real-world art piece using woodworking and laser cutting skills.</p>
-                        <div class="project-tags">
-                            <span class="tag">Wood Working</span>
-                            <span class="tag">3D Modeling</span>
-                            <span class="tag">Laser Cutting</span>
-                        </div>
-                        <a href="https://sites.google.com/colorado.edu/material/final-project" target="_blank" class="project-link">View Project →</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="design">
+                <div class="project-card" data-category="other">
                     <div class="project-image"><img src="img/CSmailer.png" alt="Project Photo"></div>
                     <div class="project-info">
                         <h3>Colorado Symphony Mailer</h3>
@@ -143,19 +131,8 @@
                         <a href="https://lucabarone015.github.io/wa/lucabarone/img/LBSymphonyMailer.pdf" target="_blank" class="project-link">View Project →</a>
                     </div>
                 </div>
-                <div class="project-card" data-category="design">
-                    <div class="project-image"><img src="img\RedBullPicture.png" alt="Project Photo"></div>
-                    <div class="project-info">
-                        <h3>3D Animation Project</h3>
-                        <p class="project-category">Design</p>
-                        <p class="project-description">Created a 3D animation based on a concept for a RedBull advertisement for a high school animation class project using Blender.</p>
-                        <div class="project-tags">
-                            <span class="tag">Blender</span>
-                            <span class="tag">3D Animation</span>
-                        </div>
-                        <a href="https://lucabarone015.github.io/wa/lucabarone/img/RedBull.MP4" target="_blank" class="project-link">View Project →</a>
-                    </div>
-                </div>
+                
+            </div>
             </div>
         </section>
             <footer class="footer">

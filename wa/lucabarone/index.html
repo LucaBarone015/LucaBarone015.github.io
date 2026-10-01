@@ -31,7 +31,7 @@
             </ul>
         </nav>
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content page-container">
                 <h1 class="hero-title">Luca Barone</h1>
                 <h2 class="hero-subtitle">Developer • Designer • Problem Solver</h2>
                 <p class="hero-text fade-in-on-scroll">
@@ -42,29 +42,27 @@
                 <a class="hero-btn" href="projects.html">
                     View My Work
                 </a>
-                <a class="resume-btn" href="img/LucaBaroneResume2026.docx.pdf" target="_blank">
+                <a class="resume-btn" href="img/LucaBaroneResumeV3.docx.pdf" target="_blank">
                     Download Resume
                 </a>
             </div>
         </section>
         <section id="skills" class="skills-section">
             <h2 class="skills-title">Skills</h2>
+            <div class="page-container">
             <div class="skills-grid">
 
                 <div class="skill-card skill-item">
                 <h3>Languages</h3>
                 <ul>
-                    <li>C++</li>
-                    <li>JavaScript / HTML / CSS</li>
-                    <li>Python</li>
-                    <li>Java</li>
+                    C++, JavaScript, HTML, CSS, Python, Java
                 </ul>
                 </div>
 
                 <div class="skill-card skill-item">
                 <h3>Tools & Programs</h3>
                 <ul>
-                    <li>Adobe Suite - Photoshop, InDesign, Premiere, After Effects, Lightroom</li>
+                    <li>Design Programs - Figma, Illustrator, After Effects, Premier, InDesign</li>
                     <li>3D Modeling - Rhino 3D, Maya, Blender</li>
                     <li>Coding - VS Code, GitHub</li>
                 </ul>
@@ -73,48 +71,42 @@
             </div>
             </section>
             <section class="featured-projects">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Featured Work</h2>
 
                 <div class="featured-projects-grid">
-                    <div class="featured-project-card" data-category="design">
-                        <div class="project-image"><img src="img/GameSFX.png" alt="Video Game Photo"></div>
-                        <div class="project-info">
-                            <h3>Video Game Sound Design</h3>
-                            <p class="project-category">DESIGN</p>
-                            <p class="project-description"> Recreated the sounds effects for a 50 second clip of Steep gameplay and made simple background music.</p>
-                            <div class="project-tags">
-                                <span class="tag">Sound Design</span>
-                            </div>
-                            <a href="https://vimeo.com/1177516379?share=copy&fl=sv&fe=ci" target="_blank" class="project-link">View Project →</a>
+                    <div class="figma-section" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+                        <!-- Large PNG preview of the Figma mobile layout (click to open modal) -->
+                        <div class="figure-thumb" style="width:100%;max-width:820px;">
+                            <img src="img/ActionPlansFlow.png" alt="Action Plans Flow - Mobile Layout" style="width:100%;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12);" />
                         </div>
-                    </div>
 
-                    <div class="featured-project-card" data-category="cir">
-                        <div class="project-image"><img src="img/IDC2Photo.jpg" alt="Project Photo"></div>
-                        <div class="project-info">
-                            <h3>High Beams Solution</h3>
-                            <p class="project-category">Circuit/Enclosure Design</p>
-                            <p class="project-description">Flashes a strobe light at oncoming drivers who leave their high beams on.</p>
+                        <!-- Short description and link to more details -->
+                        <div style="width:100%;max-width:820px;text-align:left;padding:0.25rem 0;">
+                            <h3>Smart Access Mobile App - Comment/Notes Section</h3>
+                            <p class="project-category">DESIGN/MOBILE</p>
+                            <p class="project-description">Designed a section to leave comments on associates after completeing observations and designed a notes section on associates home page to view notes/comments.</p>
                             <div class="project-tags">
-                                <span class="tag">Wiring</span>
-                                <span class="tag">3D Modeling</span>
-                                <span class="tag">Coding</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">UX</span>
                             </div>
-                            <a href="https://sites.google.com/colorado.edu/object-documentation/idc2-project" target="_blank" class="project-link">View Project →</a>
+                            <a href="img/SAMobileFlow.pdf" class="project-link">More Details →</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="view-more-wrapper fade-in-on-scroll">
                     <a class="view-more-btn" href="projects.html">View More Projects →</a>
                 </div>
 
             </section>
             <footer class="footer">
-                <p>Luca Barone</p>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/luca-barone-270a0b3b7/" target="_blank">LinkedIn</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
+                <div class="page-container">
+                    <p>Luca Barone</p>
+                    <div class="footer-links">
+                        <a href="https://www.linkedin.com/in/luca-barone-270a0b3b7/" target="_blank">LinkedIn</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
             </footer>
     </main>

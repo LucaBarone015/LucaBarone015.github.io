@@ -43,15 +43,18 @@
 
                         <form id="contactForm" class="contact-form" action="https://formspree.io/f/myzrdnee" method="POST" novalidate>
                             <label class="field">
-                                <input type="text" name="name" id="name" placeholder="Your name" required>
+                                <span>Your name</span>
+                                <input type="text" name="name" id="name" placeholder="Enter your name" autocomplete="name" required>
                             </label>
 
                             <label class="field">
-                                <input type="email" name="email" id="email" placeholder="Your email" required>
+                                <span>Your email</span>
+                                <input type="email" name="email" id="email" placeholder="you@example.com" autocomplete="email" required>
                             </label>
 
                             <label class="field">
-                                <textarea name="message" id="message" rows="5" placeholder="Your message" required></textarea>
+                                <span>Your message</span>
+                                <textarea name="message" id="message" rows="5" placeholder="Write your message" required></textarea>
                             </label>
 
                             <div class="form-actions">
